@@ -1,4 +1,5 @@
 API-Alquilaya — Proyecto SOA
+
 1. Descripción del proyecto
 API-Alquilaya es un proyecto desarrollado para la asignatura de Arquitectura Orientada a Servicios (SOA). Su objetivo es exponer servicios mediante una API REST para gestionar la información correspondiente al dominio de alquiler de vehículos y sus recursos asociados.
 
@@ -47,11 +48,13 @@ Configuración previa de las propiedades de conexión a la base de datos en appl
 6. POST /vehiculos: Registrar un nuevo vehículo enviando los datos en formato JSON.
 7. GET /clientes: Listar el registro de clientes.   POST /alquileres: Registrar un nuevo alquiler relacionando un cliente y un vehículo.
 8. PUT /alquileres/{id}/devolver: Procesar la devolución del vehículo alquilado.
-9.
-10. 6. Pruebas realizadas
+  
+
+6. Pruebas realizadas
+   
        Verificación del arranque exitoso de Spring Boot en el puerto 8081 y su conectividad con el esquema MySQL alquilaya.
        Ejecución y comprobación de consultas GET, inserciones (POST) y actualizaciones (PUT) sobre las entidades principales.
        Ajuste del componente de seguridad (SecurityConfig) para permitir el acceso libre a los endpoints durante la fase de desarrollo y pruebas funcionales locales.
 
-7. Verificación y observacionesSe comprobó la correcta creación automática de esquemas y tablas mediante Spring Data JPA Hibernate con la propiedad ddl-auto=update.
+8. Verificación y observacionesSe comprobó la correcta creación automática de esquemas y tablas mediante Spring Data JPA Hibernate con la propiedad ddl-auto=update.
           Limitaciones conocidas: El sistema opera en un entorno local de pruebas y carece temporalmente de validaciones estrictas de campos obligatorios o controles avanzados de concurrencia.
