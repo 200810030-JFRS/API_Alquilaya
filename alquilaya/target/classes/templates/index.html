@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Alquilaya - Gestión de Clientes</title>
+    <!-- Bootstrap 5 para un diseño moderno y responsivo -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+
+    <!-- Barra de navegación -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Alquilaya 🚗🚲🏢</a>
+        </div>
+    </nav>
+
+    <!-- Contenido principal -->
+    <div class="container mt-5">
+        <div class="d-flex justify-content-between align-items-center mb-4">
+            <h2>Listado de Clientes Registrados en MySQL</h2>
+            <button class="btn btn-outline-primary btn-sm" onclick="cargarClientes()">Actualizar Lista</button>
+        </div>
+
+        <div class="card shadow-sm">
+            <div class="card-body">
+                <table class="table table-striped table-hover align-middle">
+                    <thead class="table-dark">
+                        <tr>
+                            <th>ID</th>
+                            <th>Nombre</th>
+                            <th>Email</th>
+                            <th>Teléfono</th>
+                            <th>Licencia</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tabla-clientes">
+                        <!-- Los datos se cargarán dinámicamente mediante JavaScript -->
+                        <tr>
+                            <td colspan="5" class="text-center text-muted py-4">Cargando clientes...</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- Script JavaScript para consumir tu API REST (/api/clientes) -->
+    <script>
+        async function cargarClientes() {
+            try {
+                // Realiza la petición GET al controlador que ya tienes programado
+                const response = await fetch('/api/clientes');
+                const clientes = await response.json();
+                
+                const tbody = document.getElementById('tabla-clientes');
+                tbody.innerHTML = '';
+
+                if (clientes.length === 0) {
+                    tbody.innerHTML = `<tr><td colspan="5" class="text-center text-muted py-4">No hay clientes registrados en la base de datos.</td></tr>`;
+                    return;
+                }
+
+                // Rellena la tabla con los datos obtenidos de MySQL
+                clientes.forEach(cliente => {
+                    const tr = document.createElement('tr');
+                    tr.innerHTML = `
+                        <td>${cliente.id !== undefined ? cliente.id : ''}</td>
+                        <td>${cliente.nombre !== undefined ? cliente.nombre : ''}</td>
+                        <td>${cliente.email !== undefined ? cliente.email : ''}</td>
+                        <td>${cliente.telefono !== undefined ? cliente.telefono : ''}</td>
+                        <td>${cliente.licencia !== undefined ? cliente.licencia : ''}</td>
+                    `;
+                    tbody.appendChild(tr);
+                });
+            } catch (error) {
+                console.error('Error al conectar con la API:', error);
+                document.getElementById('tabla-clientes').innerHTML = `<tr><td colspan="5" class="text-center text-danger py-4">Error al cargar los datos del servidor.</td></tr>`;
+            }
+        }
+
+        // Ejecutar la función automáticamente al abrir la página
+        window.onload = cargarClientes;
+    </script>
+</body>
+</html>

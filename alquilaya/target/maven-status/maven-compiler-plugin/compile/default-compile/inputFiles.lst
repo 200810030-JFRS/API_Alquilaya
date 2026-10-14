@@ -1,0 +1,16 @@
+C:\Users\rrodr\Downloads\alquilaya\alquilaya\src\main\java\com\api\alquilaya\controllers\AdminController.java
+C:\Users\rrodr\Downloads\alquilaya\alquilaya\src\main\java\com\api\alquilaya\models\UsuariosModel.java
+C:\Users\rrodr\Downloads\alquilaya\alquilaya\src\main\java\com\api\alquilaya\models\AlquilerModel.java
+C:\Users\rrodr\Downloads\alquilaya\alquilaya\src\main\java\com\api\alquilaya\models\VehiculoModel.java
+C:\Users\rrodr\Downloads\alquilaya\alquilaya\src\main\java\com\api\alquilaya\repositories\IUsuariosRepository.java
+C:\Users\rrodr\Downloads\alquilaya\alquilaya\src\main\java\com\api\alquilaya\config\SecurityConfig.java
+C:\Users\rrodr\Downloads\alquilaya\alquilaya\src\main\java\com\api\alquilaya\services\UsuariosService.java
+C:\Users\rrodr\Downloads\alquilaya\alquilaya\src\main\java\com\api\alquilaya\services\ClienteService.java
+C:\Users\rrodr\Downloads\alquilaya\alquilaya\src\main\java\com\api\alquilaya\repositories\IClienteRepository.java
+C:\Users\rrodr\Downloads\alquilaya\alquilaya\src\main\java\com\api\alquilaya\models\ClienteModel.java
+C:\Users\rrodr\Downloads\alquilaya\alquilaya\src\main\java\com\api\alquilaya\controllers\ClienteController.java
+C:\Users\rrodr\Downloads\alquilaya\alquilaya\src\main\java\com\api\alquilaya\AlquilayaApplication.java
+C:\Users\rrodr\Downloads\alquilaya\alquilaya\src\main\java\com\api\alquilaya\controllers\OperadorController.java
+C:\Users\rrodr\Downloads\alquilaya\alquilaya\src\main\java\com\api\alquilaya\models\Bicicleta.java
+C:\Users\rrodr\Downloads\alquilaya\alquilaya\src\main\java\com\api\alquilaya\config\InicializadorDatos.java
+C:\Users\rrodr\Downloads\alquilaya\alquilaya\src\main\java\com\api\alquilaya\models\OficinaAlquilerModel.java

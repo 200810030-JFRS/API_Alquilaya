@@ -1,0 +1,15 @@
+com\api\alquilaya\AlquilayaApplication.class
+com\api\alquilaya\models\Bicicleta.class
+com\api\alquilaya\models\AlquilerModel.class
+com\api\alquilaya\services\ClienteService.class
+com\api\alquilaya\services\UsuariosService.class
+com\api\alquilaya\models\ClienteModel.class
+com\api\alquilaya\config\SecurityConfig.class
+com\api\alquilaya\repositories\IUsuariosRepository.class
+com\api\alquilaya\repositories\IClienteRepository.class
+com\api\alquilaya\controllers\OperadorController.class
+com\api\alquilaya\controllers\AdminController.class
+com\api\alquilaya\models\UsuariosModel.class
+com\api\alquilaya\models\OficinaAlquilerModel.class
+com\api\alquilaya\models\VehiculoModel.class
+com\api\alquilaya\controllers\ClienteController.class
